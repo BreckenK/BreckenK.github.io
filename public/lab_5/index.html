@@ -5,26 +5,26 @@
 <head>
     <title>Brecken Keller</title>
     <meta author="Brecken Keller">
-    <link href="style.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <header class="header">
         <p>Brecken Keller</p>
-        <p>Lab 4</p>
+        <p>Lab 5</p>
     </header>
 </head>
 
 <body>
     <main>
-        <h1>Brecken Keller's Lab 4</h1>
+        <h1>Brecken Keller's Lab 5</h1>
         <article>
             <form action="/api" method="POST">
                 <ul class="flex-outer">
                     <li>
                         <label for="firstname">First Name</label>
-                        <input type="text" name="firstname" id="firstname" maxlength="140">
+                        <input type="text" name="firstname" id="fname" maxlength="140">
                     </li>
                     <li>
                         <label for="lastname">Last Name</label>
-                        <input type="text" name="lastname" id="lastname" maxlength="140">
+                        <input type="text" name="lastname" id="lname" maxlength="140">
                     </li>
                     <li>
                         <label for="email">Email Address</label>
@@ -32,15 +32,15 @@
                     </li>
                     <li>
                         <label for="phone">Phone Number</label>
-                        <input type="text" name="phone" id="phone">
+                        <input type="tel" name="phone" id="phone">
                     </li>
                     <li>
                         <label for="message">Message</label>
-                        <textarea name="phone" id="phone" rows="5" cols="50" placeholder="Send a message!"></textarea>
+                        <textarea name="message" id="message" rows="5" cols="50" placeholder="Send a message!"></textarea>
                     </li>
                     <li>
-                        <ul class="flex-inner" id="age">
-                            <label for="age">Age</label>
+                        <label for="age">Age</label>
+                        <ul class="checkbox-list-label" id="age">
                             <li>
                                 <input type="checkbox" name="1835" id="1835" value="18-35">
                                 <label for="1835"> 18-35 Years Old</label><br>
@@ -53,15 +53,27 @@
                                 <input type="checkbox" name="5065" id="5065" value="50-65">
                                 <label for="5065"> 50-65 Years Old</label><br>
                             </li>
+                            
                         </ul>
+                        <button id='activatebutton' type='button'>Activate</button>
                     </li>
                     <li>
-                        <button type="submit">Submit Form</button>
+                        <button id='submit' type="submit">Submit Form</button>
                     </li>
                 </ul>
             </form>
         </article>
     </main>
+    <script>
+        function testFunction() {
+            fetch('/api')
+            .then((response) => response.text())
+            .then((response) => {
+              console.log(response);
+               })
+        }
+    </script>
+
 </body>
 
 </html>

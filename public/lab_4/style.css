@@ -150,6 +150,10 @@ html, body {
     align-items: center;
   }
   
+  .flex-inner input {
+    max-width: 95px;
+  }
+
   .flex-outer > li > label,
   .flex-outer li p {
     flex: 1 0 120px;
