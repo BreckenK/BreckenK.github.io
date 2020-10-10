@@ -154,20 +154,8 @@ html, body {
     align-items: center;
   }
   
-  .flex-outer > li > label,
-  .flex-outer li p {
-    flex: 1 0 120px;
-    max-width: 220px;
-  }
-  
-  .flex-outer > li > label + *,
-  .flex-inner {
-    flex: 1 0 220px;
-  }
-  
-  
   .flex-inner li {
-    width: 100px;
+    width: 95px;
   }
   
   .flex-inner {
@@ -178,4 +166,13 @@ html, body {
   .flex-outer {
     max-width: 800px;
     margin: 0 auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 8px;
+    flex: 1 0 125px;
+  }
+  
+  .flex-outer > li > label {
+    padding: 8px;
+    flex: 125px;
   }
